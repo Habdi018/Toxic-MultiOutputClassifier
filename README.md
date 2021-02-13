@@ -20,3 +20,8 @@ Four tokenizers are evaluated in this project: nltk, spacy, keras and transforme
  ## Install dependencies
 
     pip install -r requirements.txt
+
+
+## Disclaimer
+
+the whole implementation is based on skleanr, spacy, tensorflow.keras HuggingFace Transformers.
