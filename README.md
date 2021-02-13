@@ -24,4 +24,4 @@ Four tokenizers are evaluated in this project: nltk, spacy, keras and transforme
 
 ## Disclaimer
 
-The whole implementation is based on skleanr, spacy, tensorflow.keras HuggingFace Transformers.
+The whole implementation is based on sklearn, spacy, tensorflow.keras HuggingFace Transformers.
