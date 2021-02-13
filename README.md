@@ -15,3 +15,8 @@ Four tokenizers are evaluated in this project: nltk, spacy, keras and transforme
 ## Findings
  
  I found out that transformer tokenizer is helpful in the classifiers I trained for this project 
+ 
+ 
+ ## Install dependencies
+
+    pip install -r requirements.txt
