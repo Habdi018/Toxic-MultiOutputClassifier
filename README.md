@@ -5,7 +5,7 @@ https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge
 
 ## Classifiers
 
-My main classifier is XGBClassifier. My second classifier is a stacked set of RandomForestClassifier and SupportVectorMachine with LogisticRegression as the final estimator. The source for all the libraries is sklearn.
+
 
 
 ## NLP
