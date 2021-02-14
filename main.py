@@ -4,9 +4,9 @@ Here you can write your comment and observe its characteristics by my classifier
 import pickle
 
 """
-The models are: XGboost or rf-svm
+The models are rf, svr, lr, XGboost or rf-svm
 """
-model_name = "XGboost"
+model_name = "XGboost"  # write the name of your trained model here
 models_dir = "models"
 
 labels = ['toxic', 'severe_toxic', 'obscene', 'threat', 'insult', 'identity_hate']
