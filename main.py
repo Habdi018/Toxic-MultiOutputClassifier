@@ -12,7 +12,7 @@ models_dir = "models"
 labels = ['toxic', 'severe_toxic', 'obscene', 'threat', 'insult', 'identity_hate']
 
 def load_model():
-    assert "models/%s.pickle" % model_name not in models_dir, "You should run ML.py to generate models."
+    assert "models/%s.pickle" % model_name not in models_dir, "You should run ML.py to train and save your models."
     trained_model = pickle.load(open("models/%s.pickle" % model_name, 'rb'))
     return trained_model
 
