@@ -18,7 +18,7 @@ I trained two sets of classifiers in this project.
 - train_keras.py -> The second set contains two neural classification models: CNN (convolutional neural network) and BiLSTM (bidirectional long short-term memory).   
 
 ## Main
-In the main file, the whole program is compiled. After being compile, a prompt is appeared. By entering a comment in the prompt, the comment is classified. 
+In the main file, the whole program is compiled. After being compiled, a prompt is appeared. By entering a comment in the prompt, the comment is classified. 
  
  
  ## Install dependencies
