@@ -9,7 +9,7 @@ from sklearn.ensemble import RandomForestClassifier, StackingClassifier
 from sklearn import svm
 from sklearn.linear_model import LogisticRegression
 import timeit
-from NLP import tok_nltk
+from tokenization import tok_nltk
 
 start_time = timeit.default_timer()
 
@@ -29,7 +29,7 @@ def build_vectorizer():
         """
         return comment
     vectorizer = TfidfVectorizer(
-        tokenizer=tok_nltk,  # if no sklearn tokenizer, use tokenizers in NLP.py (e. g. tok_nltk)
+        tokenizer=tok_nltk,  # if no sklearn tokenizer, use tokenizers in tokenization.py (e. g. tok_nltk)
         # preprocessor=dummy,
         # stop_words=stopwords,
         # ngram_range=(1, 3)  # set ngram ranges
@@ -90,4 +90,6 @@ if __name__ == "__main__":
 
     end_time = timeit.default_timer()
     print('Time: ', end_time - start_time)
-    
+
+
+
