@@ -25,14 +25,14 @@ In the main file, the whole program is compiled. After being compile, a prompt i
 
  
  ## How to run the package?
- 1- Download the dataset into Data folder
- 2- Install the dependencies
- 3- Run ML.py
-    Note: Further data to be downloaded are indicated inside the file.
- 4- Run DL.py
+1- Download the dataset into Data folder
+2- Install the dependencies
+3- Run ML.py
+   Note: Further data to be downloaded are indicated inside the file.
+4- Run DL.py
     Note: Further data to be downloaded are indicated inside the file.
  
- Note: The addressed inside the files to save the models are preliminary. They can be changed.
+Note: The addressed inside the files to save the models are preliminary. They can be changed.
 
 
 ## Disclaimer
