@@ -35,7 +35,7 @@ In the main file, the whole program is compiled. After being compiled, a prompt 
     Note: Further data to be downloaded are indicated inside the file.
 5. Run data_analysis.py to have an overview on the dataset.
 
-Note: The addressed inside the files to save the models are preliminary. They can be changed.
+Note: The addresses inside the files to save the models are preliminary. They can be changed.
 
 
 ## Disclaimer
