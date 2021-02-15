@@ -3,6 +3,7 @@ import string
 import spacy
 import tensorflow as tf
 from transformers import BertTokenizer
+import pickle
 
 # read stopwords
 stopwords = [word for word in open("stopwords.txt").read().split("\n")]
@@ -44,10 +45,12 @@ def keras_preprocess(train, val, number_of_features=None):
     train_tokenized = tf.keras.preprocessing.sequence.pad_sequences(sequences, maxlen=max_seq_length)
     validation_sequences = tokenizer.texts_to_sequences(val["comment_text"])
     validation_tokenized = tf.keras.preprocessing.sequence.pad_sequences(validation_sequences, maxlen=max_seq_length)
+    with open('models/NN/tokenizer.pickle', 'wb') as handle:
+        pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
     return train_tokenized, validation_tokenized, number_of_features, max_seq_length
 
 # if __name__ == "__main__":
     # comment = "Stupid               Damn it! i was mking a new page so i will potentially violate! To:Wikipedia"
-    # print(tok_nltk(comment))
-    # print(tok_spacy(comment))
-    # print(tok_transformers(comment))
+    # print(preprocess(comment, t="spacy", number_of_features=None))
+    # print(preprocess(comment, t="nltk", number_of_features=None))
+    # print(preprocess(comment, t="transformers", number_of_features=None))
