@@ -7,7 +7,7 @@ https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge
 In data_preparation file, I read the train data and further split it into train and validation set. 
 
 ## Preprocess
-The preprocess.py file is used for preprocessing the data after it is read. There are four tokenizers in this file: nltk, spacy, keras and transformers.
+The tokenizers.py file is used for preprocessing the data after it is read. There are four tokenizers in this file: nltk, spacy, keras and transformers.
 
 ## Data Analysis
 In data_analysis.py, the number of comments and top tokens (based on tfidf values) are calculated for each label. 
