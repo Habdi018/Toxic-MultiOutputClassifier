@@ -6,14 +6,16 @@ https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge
 ## Data Preparation
 In data_preparation file, I read the train data and further split it into train and validation set. 
 
-## NLP
+## Preprocess
+The preprocess.py file is used for preprocessing the data after it is read. There are four tokenizers in this file: nltk, spacy, keras and transformers.
 
-The NLP.py file is used for preprocessing the data after it is read. There are four tokenizers in this file: nltk, spacy, keras and transformers.
+## Data Analysis
+In data_analysis.py, the number of comments and top tokens (based on tfidf values) are calculated for each label. 
 
 ## Classifiers
 I trained two sets of classifiers in this project.
-- ML.py -> The first set includes two ensemble-based classifiers (Random Forest and XGboost), an instance-based classifier (support vector machine), a regression-based classifier (logistic regression). This set also includes the stacked classifier of random forest and support vecotr machine. 
-- NN.py -> The second set contains two neural classification models: CNN (convolutional neural network) and BiLSTM (bidirectional long short-term memory).   
+- train_sklearn.py -> The first set includes two ensemble-based classifiers (Random Forest and XGboost), an instance-based classifier (support vector machine), a regression-based classifier (logistic regression). This set also includes the stacked classifier of random forest and support vecotr machine. 
+- train_keras.py -> The second set contains two neural classification models: CNN (convolutional neural network) and BiLSTM (bidirectional long short-term memory).   
 
 ## Main
 In the main file, the whole program is compiled. After being compile, a prompt is appeared. By entering a comment in the prompt, the comment is classified. 
@@ -27,11 +29,12 @@ In the main file, the whole program is compiled. After being compile, a prompt i
  ## How to run the package?
 1. Download the dataset into Data folder
 2. Install the dependencies
-3. Run ML.py
+3. Run train_sklearn.py
    Note: Further data to be downloaded are indicated inside the file.
-4. Run DL.py
+4. Run train_keras.py
     Note: Further data to be downloaded are indicated inside the file.
- 
+5. Run data_analysis.py to have an overview on the dataset.
+
 Note: The addressed inside the files to save the models are preliminary. They can be changed.
 
 
