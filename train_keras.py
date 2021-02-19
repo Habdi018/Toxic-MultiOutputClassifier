@@ -22,6 +22,13 @@ train, val, labels = prepare("Data/train.csv")
 # tokenization
 train_tokenized, validation_tokenized, number_of_features, max_seq_length = keras_preprocess(train, val,
                                                                                              number_of_features=1000)
+
+# pretrained embeddings
+embedding_matrix = build_embedmatrix(tokenizer=tokenizer,
+                                     file_name="embed_files/glove.6B.100d.txt",
+                                     embed_type="glove",
+                                     vocab_size=vocab_size)
+
 # Hyperparameter setting
 checkpoint_path = "ck_tmp/cp-{epoch:04d}.ckpt"
 checkpoint_dir = os.path.dirname(checkpoint_path)
@@ -52,10 +59,12 @@ def get_callbacks():
     ]
 
 model_cnn = tf.keras.Sequential(
-            [tf.keras.layers.Embedding(input_dim=number_of_features,  # size of vocabulary
+            [tf.keras.layers.Embedding(input_dim=vocab_size,  # size of vocabulary (number of features)
+                                       # weights=[embedding_matrix],  # using pretrained embeddings
                                        output_dim=50,  # dimension of the dense embedding
                                        embeddings_initializer='uniform',
-                                       input_length=max_seq_length),
+                                       input_length=max_seq_length,
+                                       trainable=False),
              tf.keras.layers.Conv1D(filters=32,
                                     kernel_size=8,
                                     strides=1,
@@ -87,10 +96,12 @@ model_cnn = tf.keras.Sequential(
              tf.keras.layers.Dense(len(set(train[labels])), activation='sigmoid')])
 
 model_bilstm = tf.keras.Sequential(
-    [tf.keras.layers.Embedding(input_dim=number_of_features,
-                               output_dim=32,
+    [tf.keras.layers.Embedding(input_dim=vocab_size,  # size of vocabulary (number of features)
+                               # weights=[embedding_matrix],  # using pretrained embeddings
+                               output_dim=32,  # dimension of the dense embedding
                                embeddings_initializer='uniform',
-                               input_length=max_seq_length),
+                               input_length=max_seq_length,
+                               trainable=False),
      tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(units=100,
                                                         activation='tanh',
                                                         recurrent_activation='sigmoid',
