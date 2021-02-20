@@ -1,3 +1,5 @@
+#  inspired by https://machinelearningmastery.com/
+
 import numpy
 import codecs
 import gensim
@@ -9,8 +11,8 @@ def glove_embed(filename):
 	for line in gf:
 		values = line.split()
 		word = values[0]
-		coefs = numpy.asarray(values[1:], dtype='float32')
-		embeddings_index[word] = coefs
+		embed_vectors = numpy.asarray(values[1:], dtype='float32')
+		embeddings_index[word] = embed_vectors
 	gf.close()
 	return embeddings_index
 
