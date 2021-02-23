@@ -26,8 +26,7 @@ def build_embedmatrix(tokenizer, file_name, vocab_size, embed_type):
 			if embedding_vector is not None:
 				embedding_matrix[i] = embedding_vector
 	if embed_type == "w2vec":
-		w2v_model = gensim.models.KeyedVectors.load_word2vec_format("embed_files/GoogleNews-vectors-negative300.bin.gz",
-																binary=True)
+		w2v_model = gensim.models.KeyedVectors.load_word2vec_format(filename, binary=True)
 		vocab = w2v_model .vocab.keys()
 		embedding_matrix = numpy.zeros((vocab_size, len(w2v_model["book"])))
 		for word, i in tokenizer.word_index.items():
