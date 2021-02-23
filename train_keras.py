@@ -7,6 +7,7 @@ from datetime import datetime
 import numpy as np
 import pandas as pd
 import os
+from build_embeddings import build_embedmatrix
 
 # Setting seeds
 random_number = 123
