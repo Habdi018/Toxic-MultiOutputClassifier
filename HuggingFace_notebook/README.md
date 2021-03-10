@@ -1,6 +1,6 @@
 # BERT TOXIC MultiOutPut Classifier
 
-This notebok is implemented in Google Colab using free its GPU.
+This notebok is implemented in Google Colab (colab.research.google.com) using free its GPU.
 
 ## Note
 
