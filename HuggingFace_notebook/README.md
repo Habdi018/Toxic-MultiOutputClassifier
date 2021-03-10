@@ -1,3 +1,4 @@
+This notebok is implemented in Google Colab using free its GPU.
 
 # Note
 
