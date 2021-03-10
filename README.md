@@ -15,7 +15,9 @@ In data_analysis.py, the number of comments and top tokens (based on tfidf value
 ## Classifiers
 I trained two sets of classifiers in this project.
 - train_sklearn.py -> The first set includes two ensemble-based classifiers (Random Forest and XGboost), an instance-based classifier (support vector machine), a regression-based classifier (logistic regression). This set also includes the stacked classifier of random forest and support vecotr machine. 
-- train_keras.py -> The second set contains two neural classification models: CNN (convolutional neural network) and BiLSTM (bidirectional long short-term memory).   
+- train_keras.py -> The second set contains two neural classification models: CNN (convolutional neural network) and BiLSTM (bidirectional long short-term memory).
+
+I also tried huggingface transformers in google colab. You can find this ipy file in HuggingFace_notebook folder.  
 
 ## Main
 In the main file, the whole program is compiled. After being compiled, a prompt is appeared. By entering a comment in the prompt, the comment is classified. 
