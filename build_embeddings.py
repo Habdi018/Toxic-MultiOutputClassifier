@@ -33,6 +33,6 @@ def build_embedmatrix(tokenizer, file_name, vocab_size, embed_type):
 			if word in vocab:
 				embedding_vector = w2v_model [word]
 				if embedding_vector is not None:
-					embedding_matrix[i] = embedding_vector 
+					embedding_matrix[i] = embedding_vector
 	return embedding_matrix
 
